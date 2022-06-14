@@ -5,6 +5,7 @@
     --clr-secondary: #f1f1f1;
     --clr-highlight:#c7864c;
     --clr-white: #ffffff;
+    --clr-grey: #aaa;
 
     --fs-900: 3rem;
     --fs-700: 1.75rem;
@@ -30,7 +31,7 @@
     box-sizing: border-box;  
 }
 
-html:focus-within {
+html {
     scroll-behavior: smooth;
   }
 
@@ -52,17 +53,17 @@ h3 {
 }
 
 h2, h3, p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5rem;
 }
 
 h1{
     font-size: var(--fs-900);
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 h2{
     font-size: var(--fs-700);
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .bg-dark{
@@ -92,6 +93,10 @@ h2{
     color:var(--clr-highlight);
 }
 
+.text-grey{
+    color:var(--clr-grey)
+}
+
 .text-center{
     text-align: center;
 }
@@ -101,11 +106,19 @@ h2{
     align-items: center;
 }
 
+.align-center{
+    display:flex;
+    justify-content: center;
+}
 
 
 .flex {
     display: flex;
     gap:var(--gap), 1rem;
+}
+
+.no-padding{
+    padding: 0;
 }
 
 .no-margin{
@@ -118,6 +131,10 @@ h2{
 
 .margin-bottom{
     margin-bottom: 10rem;
+}
+
+.title{
+    margin-bottom: 3rem;
 }
 
 .container{
@@ -140,6 +157,9 @@ section {
     padding: 10% 0;
 }
 
+section.small{
+    padding: 5%;
+}
 section.large {
     padding: 12.5% 0;
 }
@@ -158,20 +178,6 @@ header {
     width: 100%;
     padding: 1rem 10%;
     transition: all 0.2s ease 0s;
-}
-
-@media (max-width:1490px) {
-    header p{
-        display: none;
-        transition: all 0.4s ease 0s;
-        animation-name: motto-fade;
-        animation-duration: 5s;
-    }
-
-    @keyframes motto-fade {
-        0% {opacity: 1;}
-        100% {opacity: 0;}
-    }
 }
 
 
@@ -252,7 +258,6 @@ header.scrolled{
 
 .landing-bg {
     top:-80px;
-    background-image: url("BG-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
