@@ -28,7 +28,7 @@ motto: Nejnovější příspěvky
   <div class="blog-container">
   
     <div class="blog "><h2 class="h2">Poslední příspěvky</h2>
-      <div class="blog-card-group">
+        <div class="blog-card-group">
         
         {% for post in collections.post | reverse %}
             <div class="blog-card">
@@ -55,12 +55,14 @@ motto: Nejnovější příspěvky
                             <button class="hashtag">#hastag</button>
                         </div>
                     </div>
+                </div>
             </div>
         {% endfor %}
 
+
         </div>
     </div>
-    
+
     <div class="aside">
       <div class="topics">
 
