@@ -3,6 +3,7 @@ title: Blog - Broučkopisy
 layout: 'base.njk'
 motto: Nejnovější příspěvky
 ---
+<link rel="stylesheet" href="blog.css">
 
 <div class="section container">
 <h1 class="section-title">Nejnovější příspěvky</h1>
@@ -22,3 +23,90 @@ motto: Nejnovější příspěvky
 
         </ul>
 <div>
+
+<section class="bg-secondary">
+  <div class="blog-container">
+  
+    <div class="blog "><h2 class="h2">Poslední příspěvky</h2>
+      <div class="blog-card-group">
+        
+        {% for post in collections.post | reverse %}
+            <div class="blog-card">
+
+                <div class="blog-card-banner">
+                    <img src="{{ post.data.image }} alt="{{ post.data.imageAlt }}"">
+                </div>
+
+                <div class="blog-card-content-wrapper">
+                    <div class="wrapper">
+                        <button class="blog-topic">Cestopis</button> 
+                        <p class="blog-date">{{ post.date | postDate }}</p>
+                    </div>
+
+                    <h3 class="h3"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                    <p class="blog-card-text">{{ post.data.description }}</p>
+
+                    <div class="blog-cta">
+                        <a href="{{ post.url }}">Celý článek</a>
+                    </div>
+
+                    <div class="tags">
+                        <div class="wrapper">
+                            <button class="hashtag">#hastag</button>
+                        </div>
+                    </div>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+    
+    <div class="aside">
+      <div class="topics">
+
+        <h2 class="h2">Kategorie</h2>
+
+        <a href="#" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="server-outline" role="img" class="md hydrated" aria-label="server outline"></ion-icon>
+          </div>
+          <p>Cestopisy</p>
+        </a>
+
+        <a href="#" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="accessibility-outline" role="img" class="md hydrated" aria-label="accessibility outline"></ion-icon>
+          </div>
+          <p>Cestotipy</p>
+        </a>
+
+        <a href="#" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="rocket-outline" role="img" class="md hydrated" aria-label="rocket outline"></ion-icon>
+          </div>
+          <p>Kontinenty</p>
+        </a>
+
+      </div>
+      <div class="tags">
+
+        <h2 class="h2">Tagy</h2>
+
+        <div class="wrapper">
+
+          <button class="hashtag">#mongodb</button>
+          <button class="hashtag">#nodejs</button>
+          <button class="hashtag">#a11y</button>
+          <button class="hashtag">#mobility</button>
+          <button class="hashtag">#inclusion</button>
+          <button class="hashtag">#webperf</button>
+          <button class="hashtag">#optimize</button>
+          <button class="hashtag">#performance</button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
