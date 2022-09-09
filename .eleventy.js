@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
             output: "public"
         }
     };
-}
+
 
 function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
@@ -34,3 +34,5 @@ function filterTagList(tags) {
 
     return filterTagList([...tagSet]);
   });
+
+}
