@@ -3,31 +3,10 @@ title: Blog - Broučkopisy
 layout: 'article-list.njk'
 motto: Nejnovější příspěvky
 ---
-
-
-<div class="section container">
-<h1 class="section-title">Nejnovější příspěvky</h1>
-
-<ul role="list" class="articles__list flow">
-    {% for post in collections.post | reverse %}
-    <li>    
-        <article class="snippet">
-            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
-            <h3 class="snippet__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-            <p class="snippet__meta">napsal <span>{{ post.data.author }}</span> dne <span>{{ post.date | postDate }}</span></p>
-            <p class="snippet__body">{{ post.data.description }}</p> 
-             <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
-        </article>
-    </li>
-    {% endfor %}
-
-        </ul>
-<div>
-
 <section class="bg-secondary">
   <div class="blog-container">
   
-    <div class="blog "><h2 class="h2">Poslední příspěvky</h2>
+    <div class="blog "><h2 class="h2">Nejnovější příspěvky</h2>
         <div class="blog-card-group">
         
         {% for post in collections.post | reverse %}
@@ -52,7 +31,12 @@ motto: Nejnovější příspěvky
 
                     <div class="tags">
                         <div class="wrapper">
-                            <button class="hashtag">#hastag</button>
+                            {% set comma = joiner() %}
+                            {% for tag in tags -%}
+                            {% if tag !== 'posts' %}
+                            {{ comma() }} <button class="hashtag">#{{ tag }}</button>
+                            {% endif %}
+                            {%- endfor %}
                         </div>
                     </div>
                 </div>
