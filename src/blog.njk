@@ -31,11 +31,11 @@ motto: Nejnovější příspěvky
 
                     <div class="tags">
                         <div class="wrapper">
-                            {% for tag in tags -%}
+                            {% for tag in tags %}
                             {% if tag !== 'posts' %}
                             <button class="hashtag">#{{ tag }}</button>
                             {% endif %}
-                            {%- endfor %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
