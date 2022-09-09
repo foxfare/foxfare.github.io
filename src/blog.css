@@ -346,6 +346,10 @@ footer .container {
     margin: auto;
 }
 
+.footer ul{
+    list-style:none;
+}
+
 .footer-title {
     color: var(--clr-primary);
     font-weight: 700;
@@ -354,6 +358,10 @@ footer .container {
 
 .footer-link {
     color: var(--clr-secondary);
+}
+
+.footer-link:hover{
+    color: var(--clr-primary);
 }
 
 @media (min-width: 650px){
