@@ -346,7 +346,7 @@ footer .container {
     margin: auto;
 }
 
-.footer ul{
+.footer > ul{
     list-style:none;
 }
 
