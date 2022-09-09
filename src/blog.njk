@@ -31,10 +31,9 @@ motto: Nejnovější příspěvky
 
                     <div class="tags">
                         <div class="wrapper">
-                            {% set comma = joiner() %}
                             {% for tag in tags -%}
                             {% if tag !== 'posts' %}
-                            {{ comma() }} <button class="hashtag">#{{ tag }}</button>
+                            <button class="hashtag">#{{ tag }}</button>
                             {% endif %}
                             {%- endfor %}
                         </div>
