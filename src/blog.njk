@@ -4,9 +4,9 @@ layout: 'article-list.njk'
 motto: Nejnovější příspěvky
 ---
 <section class="bg-secondary">
-  <div class="blog-container">
+  <div class="container">
   
-    <div class="blog "><h2 class="h2">Nejnovější příspěvky</h2>
+    <div class="blog"><h2 class="h2">Nejnovější příspěvky</h2>
         <div class="blog-card-group">
         
         {% for post in collections.post | reverse %}
@@ -52,21 +52,21 @@ motto: Nejnovější příspěvky
 
         <a href="#" class="topic-btn">
           <div class="icon-box">
-            <ion-icon name="server-outline" role="img" class="md hydrated" aria-label="server outline"></ion-icon>
+            <ion-icon name="book-outline" role="img"></ion-icon>
           </div>
           <p>Cestopisy</p>
         </a>
 
         <a href="#" class="topic-btn">
           <div class="icon-box">
-            <ion-icon name="accessibility-outline" role="img" class="md hydrated" aria-label="accessibility outline"></ion-icon>
+            <ion-icon name="information-outline" role="img"></ion-icon>
           </div>
           <p>Cestotipy</p>
         </a>
 
         <a href="#" class="topic-btn">
           <div class="icon-box">
-            <ion-icon name="rocket-outline" role="img" class="md hydrated" aria-label="rocket outline"></ion-icon>
+            <ion-icon name="earth-outline" role="img"></ion-icon>
           </div>
           <p>Kontinenty</p>
         </a>
