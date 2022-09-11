@@ -31,10 +31,7 @@ motto: Nejnovější příspěvky
 
                     <div class="tags">
                         <div class="wrapper">
-                            {% for tag in post.data.tags | filterTagList %}
-                            {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                            <button clas=="hashtag"><a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a></button>
-                            {% endfor %}
+                        
                         </div>
                     </div>
                 </div>
