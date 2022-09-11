@@ -1,7 +1,7 @@
 ---
 layout: 'article-list.njk'
 ---
-
+<div class="bg-secondary
     <section class="post bg-secondary">
         <div class="container one-column bg-primary">
              <div class="text">
@@ -36,15 +36,12 @@ layout: 'article-list.njk'
 </section>
   
   <!MAPA>
-    <section>
-        <div class="container">
-            <div class="one-column">
-                <div class="text-center">
+    <section class="post-map">
+        <div class="container one-column">
+            <div class="text-center">
                 <h1 class="title">Odkud, kudy a kam?</h1>
                 <p>Jedna mapa za tisíc slov!</p>
-            </div>
-            <div>
-                {{ map }}
+                <iframe class="mapa" src="{{ map }}"></iframe>
             </div>
         </div>
     </section>

@@ -33,6 +33,7 @@ html{
     font-family: "inter", sans-serif;
 }
 
+
 *, ::after, ::before {
     margin: 0;
     padding: 0;
@@ -97,10 +98,18 @@ font-weight: var(--fw-700);
   line-height:1.2;
 }
 
+.text-center{
+  text-align: center;
+}
+
 /* Building blocks*/
 
 section{
-  padding:1.8rem 0 1.8rem 0;
+  padding:1.8rem 15px;
+}
+
+section:first-of-type{
+    padding-top: 130px;
 }
 
 .container{
@@ -109,7 +118,43 @@ section{
     padding: 0 15px;
 }
 
+/*HEADER*/
+header .container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width:1150px;
+}
 
+header {
+  position:fixed;
+  width:100%;
+  background-color:var(--bg-primary);
+  color:var(--accent2);
+  font-family:'Kurale', sans-serif;
+  font-variant:small-caps;
+  font-size:var(--fs-2);
+  letter-spacing:1px;
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
+  
+}
+
+header a:hover{
+  color:var(--accent2);
+}
+
+nav .motto, .nav-links{
+  display:none;
+}
+
+.primary-logo{
+  font-family: var(--fnt-logo);
+  font-size:3rem;
+  font-variant:small-caps;
+  cursor: pointer;
+}
 
 /*BLOG CARDS*/
 
@@ -229,6 +274,9 @@ background: var(--action-primary);
 }
 
 /*POST*/
+section.post{
+  margin-inline:15px;
+}
 .post .container{
   border-radius: 10px;
   padding:15px 30px;
@@ -284,6 +332,11 @@ background: var(--action-primary);
 
 .post h2, h3{
   margin-top: 1rem;
+}
+
+.mapa{
+  width:100%;
+  aspect-ratio:16/9;
 }
 
 /*FOOTER*/
@@ -366,6 +419,7 @@ footer ul{
   .container{
     padding: 0 30px;
     }
+  
 
   .blog .h2::before {
       content: '';
@@ -417,9 +471,16 @@ margin-bottom:1rem;
   .container{
   max-width:800px;
   }
+  
+  .nav-links{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  gap:2rem;
+}
 
   .post-content{
-    padding-inline:30px;
+   padding-inline:30px;
   }
 }
 
@@ -439,7 +500,7 @@ margin-bottom:1rem;
   }
 
   .container.one-column{
-    max-width: 880px;
+    max-width: 900px;
   }
 
   .container.two-column{
@@ -448,6 +509,15 @@ margin-bottom:1rem;
     gap:60px;
 
   }
+  
+  header .container{
+   grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  
+   nav .motto{
+  display:block;
+  text-align:center;
+}
   
   .aside{
     display:block;
@@ -493,3 +563,10 @@ margin-bottom:1rem;
   font-weight: 700;
 }
 }
+
+.no-decoration ul, a{
+  list-style:none;
+  text-decoration:none;
+}
+
+
