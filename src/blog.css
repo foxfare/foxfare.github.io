@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Milonga&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
   --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 97%);
-      --action-primary: hsl(214, 32%, 91%);
-    --action-secondary: hsl(210, 38%, 95%);
+  --action-primary: hsl(214, 32%, 91%);
+  --action-secondary: hsl(210, 38%, 95%);
   --clr-primary: hsl(218, 23%, 23%);
   --clr-secondary: hsl(216, 15%, 52%);
   --clr-tertiary: hsl(214, 20%, 69%);
   --accent: hsl(229, 76%, 66%);
-  
+  --accent2:#c7864c;
   --white: hsl(0, 0%, 100%);
+
     --fs-base: 0.85rem;
     --fs-1: 1.875rem;
     --fs-2: 1.5rem;
@@ -21,6 +23,8 @@
   
   --fw-900: 900;
   --fw-700: 700;
+
+  --fnt-logo:'Milonga', cursive;
 }
 
 html{
@@ -184,6 +188,11 @@ background: var(--action-primary);
   display:none;
 }
 
+.aside .h2{
+  padding: 2.5rem;
+  text-align: center;
+}
+
 .tags .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -199,6 +208,62 @@ background: var(--action-primary);
   border-radius: 5px;
 }
 
+/*POST*/
+.post .container{
+  border-radius: 10px;
+  padding:15px 30px;
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
+}
+
+.post-head{
+  margin:3rem auto;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.post-head h1{
+  margin: 0 2rem;
+  text-align:center;
+  line-height:1.4;
+}
+
+.post .wrapper{
+  display: flex;
+  flex-direction:row;
+  gap:5px;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.post-series{
+  font-size:2rem;
+}
+
+.spacer{
+  background-color:var(--clr-tertiary);
+  width:100%;
+  height:2px;
+  margin:15px auto;
+  border-radius: 1px;
+}
+
+.post-date {
+    background: var(--bg-primary);
+    color: var(--clr-tertiary);
+    font-weight: 400;
+    padding: .25rem 1rem;
+    border-radius:5px;
+}
+
+.post p{
+  margin-bottom:1.8rem;
+}
+
+.post h2, h3{
+  margin-top: 1rem;
+}
+
 /*FOOTER*/
 
 footer {
@@ -210,6 +275,13 @@ footer .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+}
+
+footer .primary-logo {
+  font-family: var(--fnt-logo);
+  font-size: var(--fs-900);
+  letter-spacing: 4px;
+  cursor:pointer
 }
 
 .footer-logo {
@@ -323,6 +395,10 @@ margin-bottom:1rem;
   .container{
   max-width:800px;
   }
+
+  .post-content{
+    padding-inline:30px;
+  }
 }
 
 
@@ -330,12 +406,24 @@ margin-bottom:1rem;
 
 @media (min-width: 1024px){
 
-  
   .container{
-    max-width:1150px;
+    max-width: 1150px;
+  }
+
+  .container .side-column{
     display: grid;
     grid-template-columns: 5fr 2fr;
     gap: 60px;
+  }
+
+  .container .one-column{
+    max-width: 980px;
+  }
+
+  .container .two-column{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
   }
   
   .aside{

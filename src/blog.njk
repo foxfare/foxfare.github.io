@@ -3,7 +3,7 @@ title: Blog - Broučkopisy
 layout: 'article-list.njk'
 motto: Nejnovější příspěvky
 ---
-<section class="bg-secondary">
+<section class="article-list bg-secondary">
   <div class="container">
   
     <div class="blog"><h2 class="h2">Nejnovější příspěvky</h2>
@@ -22,7 +22,7 @@ motto: Nejnovější příspěvky
                         <p class="blog-date">{{ post.date | postDate }}</p>
                     </div>
 
-                    <h3 class="h3"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                    <h3 class="h3"><a href="{{ post.url }}">{{ post.data.series }}{{ post.data.title }}</a></h3>
                     <p class="blog-card-text">{{ post.data.description }}</p>
 
                     <div class="blog-cta">
@@ -31,7 +31,7 @@ motto: Nejnovější příspěvky
 
                     <div class="tags">
                         <div class="wrapper">
-                        
+
                         </div>
                     </div>
                 </div>

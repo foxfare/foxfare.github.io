@@ -1,0 +1,54 @@
+---
+title: {{ post.data.title }}
+layout: 'article-list.njk'
+motto: Nejnovější příspěvky
+---
+
+<div class="container">
+    <section class="post">
+        <div class="container bg-primary">
+             <div class="text">
+    
+                <div class="wrapper">
+                    <p class="post-date">{{ post.date | postDate }}</p>
+                    <button class="blog-topic">{{ post.data.topic }}</button>
+                </div>
+                
+                <div class="post-head">
+                    <div class="title-wrapper">
+                        <H1 class="post-series">{{ post.data.series }}</h1>
+                        <div class="spacer"></div>
+                        <h1>{{ post.data.title }}</H1>
+                    </div>
+                </div>
+            
+                <div class="post-content">
+                    {{ content | safe }}
+                </div>
+
+                <div class="tag-cloud margin-top">
+                    <ul>
+                        <li><a href="#">Kostarika</a></li>
+                        <li><a href="#">Střední Amerika</a></li>
+                        <li><a href="#">2020</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</section>
+  
+  <!MAPA>
+    <section>
+        <div class="container">
+            <div class="single-column">
+                <div class="text-center">
+                <h1 class="title">Odkud, kudy a kam?</h1>
+                <p>Jedna mapa za tisíc slov!</p>
+            </div>
+            <div>
+                {{ post.data.map }}
+            </div>
+        </div>
+    </section>
+</div>
