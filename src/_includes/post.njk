@@ -1,5 +1,5 @@
 ---
-title: {{ post.data.title }}
+title: {{ title }}
 layout: 'article-list.njk'
 motto: Nejnovější příspěvky
 ---
@@ -10,14 +10,14 @@ motto: Nejnovější příspěvky
     
                 <div class="wrapper">
                     <p class="post-date">{{ post.date | postDate }}</p>
-                    <button class="blog-topic">{{ post.data.topic }}</button>
+                    <button class="blog-topic">{{ topic }}</button>
                 </div>
                 
                 <div class="post-head">
                     <div class="title-wrapper">
-                        <H1 class="post-series">{{ post.data.series }}</h1>
+                        <H1 class="post-series">{{ series }}</h1>
                         <div class="spacer"></div>
-                        <h1>{{ post.data.title }}</H1>
+                        <h1>{{ title }}</H1>
                     </div>
                 </div>
             
@@ -46,7 +46,7 @@ motto: Nejnovější příspěvky
                 <p>Jedna mapa za tisíc slov!</p>
             </div>
             <div>
-                {{ post.data.map }}
+                {{ map }}
             </div>
         </div>
     </section>
