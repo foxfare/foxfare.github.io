@@ -412,17 +412,17 @@ margin-bottom:1rem;
     max-width: 1150px;
   }
 
-  .container + .side-column{
+  .container.side-column{
     display: grid;
     grid-template-columns: 5fr 2fr;
     gap: 60px;
   }
 
-  .container + .one-column{
+  .container.one-column{
     max-width: 980px;
   }
 
-  .container + .two-column{
+  .container.two-column{
     display:grid;
     grid-template-columns: 1fr 1fr;
 
