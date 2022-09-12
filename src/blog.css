@@ -56,6 +56,28 @@ a{
   color:inherit;
 }
 
+:focus { outline-offset: 4px; }
+
+::-webkit-scrollbar { width: 16px; }
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+  border: 4px solid;
+}
+
+/*SCROLLBAR*/
+
+.light-theme::-webkit-scrollbar-thumb { border-color: hsl(0, 0%, 90%); }
+
+.dark-theme::-webkit-scrollbar-thumb { border-color: hsl(219, 27%, 20%); }
+
+.light-theme::-webkit-scrollbar-track { background: hsl(0, 0%, 90%); }
+
+.dark-theme::-webkit-scrollbar-track { background: hsl(219, 27%, 20%); }
+
+/*COLORS*/
 .bg-primary{
   background: var(--bg-primary);
 }
@@ -123,9 +145,7 @@ header .container{
   display:grid;
   grid-template-columns: 1fr 1fr;
   align-items:center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  max-width:1150px;
+  padding: 15px;
 }
 
 header {
@@ -290,6 +310,7 @@ section.post{
   display: flex;
   flex-direction:column;
   align-items:center;
+  margin-bottom:5rem;
 }
 
 .post-head h1{
@@ -313,7 +334,7 @@ section.post{
 .spacer{
   background-color:var(--clr-tertiary);
   width:100%;
-  height:2px;
+  height:1px;
   margin:15px auto;
   border-radius: 1px;
 }
@@ -334,9 +355,19 @@ section.post{
   margin-top: 1rem;
 }
 
-.mapa{
+section.post-map{
+  padding-top:1rem;
+}
+
+.map-title{
+  align-text:center;
+  margin-bottom:3rem;
+}
+
+.map{
+  margin:0 auto;
   width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio:4/3;
 }
 
 /*FOOTER*/
@@ -392,6 +423,11 @@ footer ul{
 
 /*TABLET SMALL / MIN-WIDTH 550px*/
 @media (min-width:550px){
+  :root {
+    --fs-base: 0.90rem;
+
+  }
+
   .blog-card{
     display:grid;
     grid-template-columns: 3fr 4fr;
@@ -410,12 +446,24 @@ footer ul{
     height: 100%;
     object-fit: cover;
   }
+
+  .map{
+    aspect-ratio:16/9;
+  }
 }
 
 
 /*TABLET LARGE / MIN-WIDTH 650px*/
 
 @media (min-width:650px){
+  :root {
+    --fs-1: 2.25rem;
+  }
+
+  header{
+    padding: 15px 30px;
+  }
+
   .container{
     padding: 0 30px;
     }
@@ -489,6 +537,11 @@ margin-bottom:1rem;
 
 @media (min-width: 1024px){
 
+  :root {
+    --fs-base: 1rem;
+    --fs-1: 3rem;
+  }
+
   .container{
     max-width: 1150px;
   }
@@ -512,6 +565,7 @@ margin-bottom:1rem;
   
   header .container{
    grid-template-columns: 1fr 1.5fr 1fr;
+   max-width:1280px;
   }
   
    nav .motto{
