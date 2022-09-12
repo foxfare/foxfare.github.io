@@ -360,7 +360,7 @@ section.post-map{
 }
 
 .map-title{
-  align-text:center;
+  text-align:center;
   margin-bottom:3rem;
 }
 
@@ -460,14 +460,13 @@ footer ul{
     --fs-1: 2.25rem;
   }
 
-  header{
-    padding: 15px 30px;
-  }
-
   .container{
     padding: 0 30px;
     }
   
+  header .container{
+    padding: 15px 30px;
+  }
 
   .blog .h2::before {
       content: '';
@@ -565,7 +564,7 @@ margin-bottom:1rem;
   
   header .container{
    grid-template-columns: 1fr 1.5fr 1fr;
-   max-width:1280px;
+   max-width:90%;
   }
   
    nav .motto{
