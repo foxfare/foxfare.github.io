@@ -276,7 +276,6 @@ nav .motto, .nav-links{
   flex-direction:row;
   align-items: center;
   gap: 15px;
-margin-bottom:1rem;
 }
 
 .blog-topic {
