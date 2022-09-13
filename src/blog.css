@@ -140,6 +140,11 @@ section.large{
     padding: 0 15px;
 }
 
+.anchor {
+  position: absolute;
+  transform: translateY(-30vh);
+}
+
 /*HEADER*/
 header .container{
   display:grid;
