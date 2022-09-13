@@ -165,6 +165,7 @@ header {
   font-size:var(--fs-2);
   letter-spacing:1px;
   box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
+  transition: all 0.4s ease 0s;
   
 }
 
@@ -190,6 +191,8 @@ nav .motto, .nav-links{
 .landing-header{
   background-color: transparent;
   color:var(--bg-primary);
+  transition: all 0.2s ease 0s;
+  box-shadow: none;
 }
 
 .landing-header a:hover{

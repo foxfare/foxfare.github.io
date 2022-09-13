@@ -10,11 +10,11 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
     entries.forEach(entry => {
         if(!entry.isIntersecting){
             header.classList.remove('landing-header');
-            logo.classList.remove('logo-text-hidden');
+            logo.classList.add('logo-text-hidden');
         }
         else{
             header.classList.add('landing-header');
-            logo.classList.add('logo-text-hidden');
+            logo.classList.remove('logo-text-hidden');
         }
     })
 }, sectionOneOptions);
