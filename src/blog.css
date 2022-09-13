@@ -32,6 +32,7 @@ html{
     line-height: 1.8;
     font-family: "inter", sans-serif;
     color:var(--clr-primary);
+    scroll-behavior: smooth;
 }
 
 
