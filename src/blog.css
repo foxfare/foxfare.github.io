@@ -31,6 +31,7 @@ html{
       font-size: var(--fs-base);
     line-height: 1.8;
     font-family: "inter", sans-serif;
+    color:var(--clr-primary);
 }
 
 
@@ -86,6 +87,14 @@ a{
   background: var(--bg-secondary);
 }
 
+.bg-dark{
+  background: var(--clr-primary);
+}
+
+.shadow{
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
+}
+
 /*FONTS AND TEXT*/
 
 p{
@@ -127,11 +136,21 @@ font-weight: var(--fw-700);
 /* Building blocks*/
 
 section{
-  padding:1.8rem 15px;
+  padding:5rem 15px;
 }
 
 section:first-of-type{
     padding-top: 130px;
+}
+
+section.large{
+  padding-top:5rem;
+  padding-bottom:5rem;
+}
+
+.section-title{
+  line-height:1;
+  margin-bottom:3rem;
 }
 
 .container{
@@ -179,6 +198,54 @@ nav .motto, .nav-links{
   font-size:3rem;
   font-variant:small-caps;
   cursor: pointer;
+}
+
+/*LANDING PAGE*/
+
+.landing-bg {
+  top:-90px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100vh;
+}
+
+
+/*FEATURED POSTS*/
+.featured h3{
+  text-align:center;
+  margin-bottom:1rem;
+  color:var(--clr-secondary);
+}
+
+.featured .container{
+  gap:15px;
+}
+
+.featured-card{
+  display:grid;
+  grid-template-rows:1fr auto;
+  
+  background-color:var(--bg-primary);
+  padding:15px;
+  border-radius:10px;
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);  
+}
+
+.featured-card h3{
+  margin:0;
+  margin-top:15px;
+  padding: 0px 5px;
+  color:var(--clr-primary);
+}
+
+.featured-banner{
+  display:block;
+  width:100%;
+  overflow:hidden;
+  aspect-ratio:16/9;
+  border-radius:5px;
+  background-color:var(--bg-secondary);
 }
 
 /*BLOG CARDS*/
@@ -438,6 +505,19 @@ footer ul{
 
   }
 
+  .featured-card{
+    display:grid;
+    grid-template-rows:none;
+    grid-template-columns: 2fr 3fr;
+    gap:30px;
+    align-items:center;
+  }
+  
+  .featured-card h3{
+    text-align:left;
+    margin-top:0;
+  }
+
   .blog-card{
     display:grid;
     grid-template-columns: 3fr 4fr;
@@ -535,6 +615,20 @@ margin-bottom:1rem;
   .post-content{
    padding-inline:30px;
   }
+
+  .featured .container{
+    display:grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+  }
+  
+  .featured-card{
+    display:block;
+  }
+  
+  .featured-card h3{
+    margin-top:15px;
+    text-align:center;
+  }
 }
 
 
@@ -564,8 +658,9 @@ margin-bottom:1rem;
   .container.two-column{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    gap:60px;
-
+    gap:30px;
+    align-items:center;
+    max-width:980px;
   }
   
   header .container{
@@ -621,6 +716,11 @@ margin-bottom:1rem;
   color: var(--foreground-secondary);
   font-weight: 700;
 }
+
+.featured .container{
+  gap:30px;
+}
+
 }
 
 .no-decoration ul, a{
