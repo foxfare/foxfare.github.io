@@ -13,7 +13,7 @@ motto: Nejnovější příspěvky
             <div class="blog-card">
 
                 <div class="blog-card-banner">
-                    <img src="{{ post.data.image }} alt="{{ post.data.imageAlt }}"">
+                    <a href="{{ post.url }}"><img src="{{ post.data.image }} alt="{{ post.data.imageAlt }}""></a>
                 </div>
 
                 <div class="blog-card-content-wrapper">
@@ -24,15 +24,7 @@ motto: Nejnovější příspěvky
 
                     <h3 class="h3"><a href="{{ post.url }}">{{ post.data.series }} - {{ post.data.title }}</a></h3>
                     <p class="blog-card-text">{{ post.data.description }}</p>
-
-                    <div class="blog-cta">
-                        <a href="{{ post.url }}">Celý článek</a>
-                    </div>
-
-                    <div class="tags">
-                        <div class="wrapper">
-
-                        </div>
+                    
                     </div>
                 </div>
             </div>
