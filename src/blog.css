@@ -172,7 +172,7 @@ header a{
 }
 
 header a:hover{
-  color:var(--accent2);
+  color:var(--clr-primary);
 }
 
 nav .motto, .nav-links{
@@ -184,6 +184,19 @@ nav .motto, .nav-links{
   font-size:3rem;
   font-variant:small-caps;
   cursor: pointer;
+}
+
+.landing-header{
+  background-color: transparent;
+  color:var(--bg-primary);
+}
+
+.landing-header a:hover{
+  color:var(--accent2);
+}
+
+.logo-text-hidden{
+  display:none;
 }
 
 /*LANDING PAGE*/

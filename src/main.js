@@ -9,12 +9,12 @@ const sectionOneOptions = {
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
     entries.forEach(entry => {
         if(!entry.isIntersecting){
-            header.classList.add('scrolled');
-            logo.classList.add('logo-text-hidden');
+            header.classList.remove('landing-header');
+            logo.classList.remove('logo-text-hidden');
         }
         else{
-            header.classList.remove('scrolled');
-            logo.classList.remove('logo-text-hidden');
+            header.classList.add('landing-header');
+            logo.classList.add('logo-text-hidden');
         }
     })
 }, sectionOneOptions);
