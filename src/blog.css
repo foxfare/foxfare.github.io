@@ -432,6 +432,7 @@ section.post::after{
 
 .post h2, h3{
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 section.post-map{
