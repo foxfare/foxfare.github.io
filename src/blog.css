@@ -242,6 +242,10 @@ nav .motto, .nav-links{
   color:var(--clr-primary);
 }
 
+.featured-card h3 a:hover {
+   color: var(--accent2);
+}
+
 .featured-banner{
   display:block;
   width:100%;
@@ -299,6 +303,10 @@ nav .motto, .nav-links{
 .blog-card .h3 {
     line-height: 1.4;
     margin-bottom:1rem;
+}
+
+.blog-card .h3 a:hover {
+   color: var(--accent2);
 }
 
 .blog-card .tag-list {
