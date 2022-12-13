@@ -230,7 +230,7 @@ nav .motto, .nav-links{
   grid-template-rows:1fr auto;
   
   background-color:var(--bg-primary);
-  padding:15px;
+  padding:10px;
   border-radius:10px;
   box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);  
 }
@@ -538,6 +538,7 @@ footer ul{
   .blog-card{
     display:grid;
     grid-template-columns: 3fr 4fr;
+    grid-auto-rows: 1fr;
     max-height: 250px;
     gap:20px;
   }
@@ -555,6 +556,7 @@ footer ul{
     height:100%;
     width:100%;
     aspect-ratio: 4/3;
+
     object-fit: cover;
   }
 
