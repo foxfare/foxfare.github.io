@@ -278,7 +278,6 @@ nav .motto, .nav-links{
     padding: 10px;
     margin-bottom: 1rem;
     border-radius: 10px;
-    max-height: 270px;
     box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
     transition: .25s ease;
 }
@@ -539,6 +538,7 @@ footer ul{
   .blog-card{
     display:grid;
     grid-template-columns: 3fr 4fr;
+    max-height: 270px;
     gap:20px;
   }
   
@@ -547,6 +547,7 @@ footer ul{
     overflow: hidden;
     border-radius: 5px;
     overflow:hidden;
+    max-height: 250px;
   }
   
   .blog-card-banner img {
