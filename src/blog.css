@@ -545,6 +545,8 @@ footer ul{
     display: block;
     overflow: hidden;
     border-radius: 5px;
+    overflow:hidden;
+    aspect-ratio:4/3;
   }
   
   .blog-card-banner img {
