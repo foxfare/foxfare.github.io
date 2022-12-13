@@ -551,6 +551,7 @@ footer ul{
   
   .blog-card-banner img {
     display:block;
+    height:100%;
     width:100%;
     max-height: 250px;
     object-fit: cover;
