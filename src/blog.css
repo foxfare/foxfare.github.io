@@ -441,13 +441,12 @@ section.post::after{
     border-radius:5px;
 }
 
-.post p{
+.post p, h3{
   margin-bottom:1.8rem;
 }
 
 .post h2, h3{
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 section.post-map{
