@@ -538,7 +538,7 @@ footer ul{
   .blog-card{
     display:grid;
     grid-template-columns: 3fr 4fr;
-    max-height: 270px;
+    max-height: 250px;
     gap:20px;
   }
   
@@ -547,13 +547,14 @@ footer ul{
     overflow: hidden;
     border-radius: 5px;
     overflow:hidden;
-    max-height: 250px;
+    max-height: 230px;
   }
   
   .blog-card-banner img {
     display:block;
     height:100%;
     width:100%;
+    aspect-ratio: 4/3;
     object-fit: cover;
   }
 
