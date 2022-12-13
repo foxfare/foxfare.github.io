@@ -45,3 +45,13 @@ function navSlide() {
 }
 
 navSlide();
+
+function blogCardEnlargee() {
+    const blogCard = document.querySelector('.blog-card');
+
+    blogCard.addEventListener('click',() => {
+        blogCard.classList.toggle('blog-card-active');
+    });
+}
+
+blogCardEnlargee();
