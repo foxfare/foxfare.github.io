@@ -63,7 +63,7 @@ module.exports = function(eleventyConfig) {
         });
     
         // Get each item that matches the tag
-        let paginationSize = 1;
+        let paginationSize = 5;
         let tagMap = [];
         let tagArray = [...tagSet];
         for( let tagName of tagArray) {
