@@ -8,7 +8,7 @@ layout: 'article-list.njk'
     
                 <div class="wrapper">
                     <p class="post-date">{{ page.date | postDate }}</p>
-                    <button class="blog-topic">{{ topic }}</button>
+                    <a href="\tags\{{ category }}\"><button class="blog-topic">{{ topic }}</button></a>
                 </div>
                 
                 <div class="post-head">

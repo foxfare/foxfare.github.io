@@ -1,20 +1,22 @@
 ---
-title: Cestopisy
 layout: 'article-list.njk'
 motto: Nejnovější příspěvky
 pagination:
-  data: collections.Cestopis
+  data: collections.doublePagination
   size: 1
-  reverse: true
-  alias: post
+  alias: tag
+permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}
+eleventyComputed:
+  title: {{tag.tagName}}
 ---
+
 <section class="article-list bg-secondary">
   <div class="container side-column">
   
-    <div class="blog"><h2 class="h2">Nejnovější příspěvky</h2>
+    <div class="blog"><h2 class="h2">Nejnovější příspěvky z kategorie {{ tag.tagName }}</h2>
         <div class="blog-card-group">
         
-        {% for post in pagination.items -%}
+        {% for post in tag.pageData %}
             <div class="blog-card">
 
                 <div class="blog-card-banner">
@@ -23,7 +25,7 @@ pagination:
 
                 <div class="blog-card-content-wrapper">
                     <div class="wrapper">
-                        <button class="blog-topic">{{ post.data.topic }}</button> 
+                        <a href="\tags\{{ post.data.category }}\"><button class="blog-topic">{{ post.data.topic }}</button></a> 
                         <p class="blog-date">{{ post.date | postDate }}</p>
                     </div>
 
@@ -34,14 +36,6 @@ pagination:
                 </div>
             </div>
         {% endfor %}
-
-        
-{% if pagination.href.previous %}
-  <a href="{{pagination.href.previous}}">Novější cesty</a>
-{% endif %}
-{% if pagination.href.next %}
-  <a href="{{pagination.href.next}}">Starší cesty</a>
-{% endif %}
 
         </div>
     </div>
@@ -73,23 +67,15 @@ pagination:
         </a>
 
       </div>
+
+
       <div class="tags">
-
         <h2 class="h2">Tagy</h2>
-
         <div class="wrapper">
-
-          <button class="hashtag">#Tag</button>
-          <button class="hashtag">#Taky Tag</button>
-          <button class="hashtag">#Hele taky tag</button>
-          <button class="hashtag">#Dlouhatánckej tag</button>
-          <button class="hashtag">#Toto není tag</button>
-          <button class="hashtag">#Ledaze by to tag byl</button>
-          <button class="hashtag">#Tagatag</button>
-          <button class="hashtag">#Tag Tagit Tag</button>
-
+          {% for tag in collections.tagList %}
+            <a href ="/tags/{{ tag }}/"><button class="hashtag">#{{ tag }}</button></a>
+          {% endfor %}
         </div>
-
       </div>
 
     </div>

@@ -1,7 +1,6 @@
 {
   "name": "foxfare.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -19,6 +18,11 @@
   },
   "homepage": "https://github.com/foxfare/foxfare.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.chunk": "^4.2.0"
   }
 }

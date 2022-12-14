@@ -24,38 +24,31 @@ motto: Cesty, jídlo, dobrodružství, kočičky
 <section class="featured bg-secondary">
     <h1 class="section-title text-center">Kde začít?</h1>
     <div class="container">
-         
-      <div><h3>Poslední cestopis</h3>
+    {% set postList = collections.cestopis %}
+    {% for post in postList | head(-2) %}
+
+      <div><h3>Nejnovější cestopis</h3>
         <div class="featured-card">
           <div class="featured-banner">
-            <a href="https://brouckopisy.netlify.app/blog/2022-06-15-den-priletu/"><img src="https://images.unsplash.com/photo-1628777249310-cb9a5d7fe734?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"></a>
+            <a href="/tags/cestopis/ {{ post.url }}"><img src={{post.data.image}}></a>
           </div>
           <div>
-            <H3><a href="https://brouckopisy.netlify.app/blog/2022-06-15-den-priletu/">Kostarika 01 <br> Nejkratší přestup v dějinách</a></h3>
-            
+            <H3><a href={{ post.url }}>{{ post.data.series }} <br> {{ post.data.title }}</a></h3>
           </div>
         </div>
       </div>
-    
-      <div><h3>Poslední cestotip</h3>
-        <div class="featured-card">
-          <div class="featured-banner">
-            <a href=""><img src=""></a>
-          </div>
-          <div>
-            <H3><a href="">Titulek</a></h3>
-          </div>
-        </div>
-      </div>
+
+    {%endfor%}
       
-      <div><h3>Poslední série</h3>
+      <div><h3>Nejnovější série</h3>
         <div class="featured-card">
           <div class="featured-banner">
-            <a href="https://brouckopisy.netlify.app/blog/2022-11-17-pristi-stanice-holesovice/"><img src="https://images.unsplash.com/photo-1597932552386-ad91621e4c8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"></a>
+            {% for post in collections.posts | head(-1) %}
+            <a href="/tags/ {{ post.data.series }}"><img src={{ post.data.image }}></a>
           </div>
           <div>
-            <h3><a href="https://brouckopisy.netlify.app/blog/2022-11-17-pristi-stanice-holesovice/">Berlín 01 <br> Příští stanice... Holešovice?</a></h3>
-            
+            <H3><a href={{ post.data.url }}>{{ post.data.series }} <br> {{ post.data.title }}</a></h3>
+            {% endfor %}
           </div>
         </div>
       </div>
