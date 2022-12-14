@@ -11,6 +11,10 @@ module.exports = function(eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     })
 
+    eleventyConfig.addCollection("Cestopis", function(collection) {
+        return collection.getFilteredByTags("cestopis");
+    });
+
     return {
         dir: {
             input: "src",
@@ -18,3 +22,4 @@ module.exports = function(eleventyConfig) {
         }
     };
 }
+

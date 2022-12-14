@@ -1,7 +1,12 @@
 ---
-title: Blog - Broučkopisy
+title: Cestopisy
 layout: 'article-list.njk'
 motto: Nejnovější příspěvky
+pagination:
+  data: collections.Cestopis
+  size: 1
+  reverse: true
+  alias: post
 ---
 <section class="article-list bg-secondary">
   <div class="container side-column">
@@ -9,7 +14,7 @@ motto: Nejnovější příspěvky
     <div class="blog"><h2 class="h2">Nejnovější příspěvky</h2>
         <div class="blog-card-group">
         
-        {% for post in collections.post | reverse %}
+        {% for post in pagination.items -%}
             <div class="blog-card">
 
                 <div class="blog-card-banner">
@@ -30,6 +35,13 @@ motto: Nejnovější příspěvky
             </div>
         {% endfor %}
 
+        
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Novější cesty</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Starší cesty</a>
+{% endif %}
 
         </div>
     </div>

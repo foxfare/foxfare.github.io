@@ -445,8 +445,9 @@ section.post::after{
   margin-bottom:1.8rem;
 }
 
-.post h2, h3{
-  margin-top: 1rem;
+.post h2 {
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 section.post-map{
