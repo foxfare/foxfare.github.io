@@ -479,6 +479,11 @@ footer .container {
     gap: 30px;
 }
 
+footer .center{
+  display:flex;
+  align-items: center;
+}
+
 footer .primary-logo {
   font-family: var(--fnt-logo);
   font-size: var(--fs-900);
@@ -487,7 +492,16 @@ footer .primary-logo {
 }
 
 .footer-logo {
+    color: var(--clr-secondary);
+    font-family: var(--fnt-logo);
+    font-size:3rem;
+    font-variant:small-caps;
+    cursor: pointer;
     margin-bottom: 10px;
+}
+
+.footer-logo:hover{
+  color: var(--clr-primary)
 }
 
 .footer-text {
@@ -622,7 +636,7 @@ margin-bottom:1rem;
 
   footer .container {
   padding: var(--py) 30px;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 0.4fr 1.6fr 1fr 1fr;
   }
 
   .footer-text {
