@@ -392,6 +392,7 @@ background: var(--action-primary);
 /*POST*/
 section.post{
   margin-inline:15px;
+  padding-bottom:0;
 }
 
 section.post::after{
