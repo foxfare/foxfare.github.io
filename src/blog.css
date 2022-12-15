@@ -206,11 +206,15 @@ nav .motto, .nav-links{
 /*LANDING PAGE*/
 
 .landing-bg {
+  
   top:-90px;
-  background-position: center;
+  height: 0;
+  padding: 0; /* remove any pre-existing padding, just in case */
+  padding-bottom: 52.7%; /* for a 4:3 aspect ratio */
+  background-image: url('/assets/BG-img.jpg');
+  background-position: center center;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size:cover;
-  height: 100vh;
 }
 
 
@@ -282,6 +286,11 @@ nav .motto, .nav-links{
     transition: .25s ease;
 }
 
+.blog-card:hover{
+  box-shadow: 0 15px 15px hsl(0deg 0% 0% / 12%);
+  transition: .25s ease;
+}
+
 .blog .wrapper {
   display: flex;
   flex-direction:row;
@@ -295,7 +304,7 @@ nav .motto, .nav-links{
     font-weight: 600;
     padding: .25rem 1rem;
     border-radius: 5px;
-    align-self: flex-start
+    align-self: flex-start;
 }
 
 .blog-topic:hover{
@@ -312,7 +321,7 @@ nav .motto, .nav-links{
   margin-top:0.5rem;
 }
 
-.blog-card .h3 a:hover {
+.blog-card h3 > a:hover {
    color: var(--accent2);
 }
 
@@ -381,12 +390,16 @@ background: var(--action-primary);
 }
 
 .hashtag {
-  background: var(--action-primary);
+  background: var(--action-secondary);
   color: var(--clr-secondary);
   padding: 5px 10px;
   font-size: var(--fs-5);
   font-weight: 700;
   border-radius: 5px;
+}
+
+.hashtag:hover{
+  background-color: var(--action-primary);
 }
 
 /*POST*/
@@ -728,14 +741,8 @@ margin-bottom:1rem;
   }
   
   header .container{
-   grid-template-columns: 1fr 1.5fr 1fr;
-   max-width:90%;
-  }
-  
-   nav .motto{
-  display:block;
-  text-align:center;
-}
+    max-width:90%;
+   }
 
 .blog .h2{
   padding: 2.5rem;
@@ -798,4 +805,15 @@ margin-bottom:1rem;
   text-decoration:none;
 }
 
+@media (min-width: 1200px){
+  header .container{
+    grid-template-columns: 1fr 1.5fr 1fr;
+    max-width:90%;
+   }
 
+  nav .motto{
+    display:block;
+    text-align:center;
+  }
+
+}
