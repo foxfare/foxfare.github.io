@@ -23,36 +23,30 @@ motto: Cesty, jídlo, dobrodružství, kočičky
 
 <section class="featured bg-secondary">
     <h1 class="section-title text-center">Kde začít?</h1>
+ 
     <div class="container">
     {% set postList = collections.cestopis %}
-    {% for post in postList | head(-2) %}
+    {% for post in postList | head(-3) %}
 
-      <div><h3>Nejnovější cestopis</h3>
+      <div>
         <div class="featured-card">
           <div class="featured-banner">
             <a href="/tags/cestopis/ {{ post.url }}"><img src={{post.data.image}}></a>
           </div>
           <div>
-            <H3><a href={{ post.url }}>{{ post.data.series }} <br> {{ post.data.title }}</a></h3>
+            <h3>{{ post.data.series }}</h3>
+            <H3><a href={{ post.url }}>{{ post.data.title }}</a></h3>
           </div>
         </div>
       </div>
 
     {%endfor%}
-      
-      <div><h3>Nejnovější série</h3>
-        <div class="featured-card">
-          <div class="featured-banner">
-            {% for post in collections.posts | head(-1) %}
-            <a href="/tags/ {{ post.data.series }}"><img src={{ post.data.image }}></a>
-          </div>
-          <div>
-            <H3><a href={{ post.data.url }}>{{ post.data.series }} <br> {{ post.data.title }}</a></h3>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
     
+    </div>
+    <br>
+    <div class="featured-cta">
+      <a href="">Prohlížet všechny série</a>
+      <a href="">Vybrat podle kontinentu</a>
     </div>
   </section>
 
