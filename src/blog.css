@@ -245,8 +245,7 @@ nav .motto, .nav-links{
   transition: .25s ease;
 }
 
-.featured-card h3:first-of-type{
-  margin-top:15px;
+.featured-card h3:last-of-type{
   text-transform: uppercase;
   font-size: 1rem;
   color: var(--clr-tertiary);
@@ -486,6 +485,10 @@ section.post::after{
 
 .post p, h3{
   margin-bottom:1.8rem;
+}
+
+.post p:last-of-type{
+  margin-bottom:3rem;
 }
 
 .post h2 {
