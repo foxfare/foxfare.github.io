@@ -267,6 +267,7 @@ nav .motto, .nav-links{
   overflow:hidden;
   aspect-ratio:16/9;
   border-radius:5px;
+  margin-bottom: 10px;
   background-color:var(--bg-secondary);
 }
 
@@ -496,7 +497,7 @@ section.post::after{
   margin-bottom: 1rem;
 }
 
-.post .post-date {
+.post p.post-date {
     background: var(--bg-primary);
     color: var(--clr-tertiary);
     font-weight: 400;
@@ -612,6 +613,10 @@ footer ul{
 
   .featured-card h3:first-of-type{
     margin-top:0;
+  }
+
+  .featured-banner{
+      margin-bottom: 0;
   }
 
   .blog-card{
