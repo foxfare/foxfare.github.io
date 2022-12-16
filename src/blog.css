@@ -278,29 +278,23 @@ nav .motto, .nav-links{
     object-fit: cover;
   }
 
-.featured-cta {
+.container.featured-cta {
     padding-top:3rem;
     display:flex;
-    gap:1rem;
-    justify-content: center;
-    margin-inline:auto;
+    justify-content: space-between;
+    width:fit-content;
   }
 
   .featured-cta > a {
-    background: var(--clr-secondary);
-    color: var(--bg-secondary);
-    box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);  
-    font-size:0.875rem;
+    color: var(--clr-secondary);
+    font-size:1rem;
     font-weight: 700;
-    padding: .25rem 0.5rem;
-    border-radius: 5px;
-    max-width:fit-content;
+    width:fit-content;
   }
 
   .featured-cta a:hover{
-    box-shadow: 0 10px 10px hsl(0deg 0% 0% / 12%);
     transition: .25s ease;
-    background-color: var(--clr-primary);
+    color: var(--clr-primary);
   }
 
 /*BLOG CARDS*/
