@@ -23,7 +23,7 @@ motto: Cesty, jídlo, dobrodružství, kočičky
 
 <section class="featured bg-secondary">
     <h1 class="section-title text-center">Kde začít?</h1>
- 
+    
     <div class="container">
     {% set postList = collections.cestopis %}
     {% for post in postList | head(-3) %}
@@ -42,11 +42,6 @@ motto: Cesty, jídlo, dobrodružství, kočičky
 
     {%endfor%}
     
-    </div>
-    <br>
-    <div class="container featured-cta">
-      <a href="#">Prohlížet všechny série</a>
-      <a href="#">Vybrat podle kontinentu</a>
     </div>
   </section>
 
