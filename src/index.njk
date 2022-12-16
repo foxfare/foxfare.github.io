@@ -25,7 +25,7 @@ motto: Cesty, jídlo, dobrodružství, kočičky
     <h1 class="section-title text-center">Kde začít?</h1>
 
     <div class="container">
-    {% set postList = collections.cestopis %}
+    {% set postList = collections.cestopis | reverse %}
     {% for post in postList | head(-3) %}
 
       <div>
