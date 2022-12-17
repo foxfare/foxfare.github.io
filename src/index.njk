@@ -1,6 +1,5 @@
 ---
-title: Broučkopisy
-layout: 'article-list.njk'
+layout: 'base.njk'
 motto: Cesty, jídlo, dobrodružství, kočičky
 ---
 
@@ -28,16 +27,17 @@ motto: Cesty, jídlo, dobrodružství, kočičky
     {% set postList = collections.cestopis | reverse %}
     {% for post in postList | head(-3) %}
 
-      <div>
+      
+      <div><a href={{ post.url }}>
         <div class="featured-card">
           <div class="featured-banner">
-            <a href="{{ post.url }}"><img src={{post.data.image}}></a>
+            <img src={{post.data.image}}>
           </div>
           <div>
-            <H3><a href={{ post.url }}>{{ post.data.title }}</a></h3>
+            <H3>{{ post.data.title }}</h3>
             <h3>{{ post.data.series }}</h3>
           </div>
-        </div>
+        </div></a>
       </div>
 
     {%endfor%}

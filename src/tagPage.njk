@@ -1,5 +1,5 @@
 ---
-layout: 'article-list.njk'
+layout: 'base.njk'
 motto: Nejnovější příspěvky
 pagination:
   data: collections.doublePagination
@@ -18,24 +18,20 @@ eleventyComputed:
         
         {% for post in tag.pageData %}
             <div class="blog-card">
-
                 <div class="blog-card-banner">
-                    <a href="{{ post.url }}"><img src="{{ post.data.image }}"></a>
+                    <a href={{ post.url }}><img src="{{ post.data.image }}"></a>
                 </div>
 
                 <div class="blog-card-content-wrapper">
-                    <div class="wrapper">
-                        <a href="\tags\{{ post.data.category }}\"><button class="blog-topic">{{ post.data.topic }}</button></a>
-                      <p class="blog-date">{{ post.date | postDate }}</p>
-                       
-                        
-                    </div>
-                    
-                    <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                  <div class="wrapper">
+                    <a href="\tags\{{ post.data.category }}\"><button class="blog-topic">{{ post.data.topic }}</button></a>
+                    <p class="blog-date">{{ post.date | postDate }}</p>      
+                  </div>
+                    <a href={{ post.url }}>
+                    <h3>{{ post.data.title }}</h3>
                     <h3 class="blog-series">{{ post.data.series }}</h3>
                     <p class="blog-card-text">{{ post.data.description }}</p>
-
-                    
+                    </a>
                 </div>
             </div>
         {% endfor %}
@@ -45,10 +41,9 @@ eleventyComputed:
 
     <div class="aside">
       <div class="topics">
-
         <h2 class="h2">Kategorie</h2>
 
-        <a href="#" class="topic-btn">
+        <a href="\tags\cestopis\" class="topic-btn">
           <div class="icon-box">
             <ion-icon name="book-outline" role="img"></ion-icon>
           </div>
