@@ -264,6 +264,7 @@ nav .motto, .nav-links{
 .featured-banner{
   display:block;
   width:100%;
+  max-height: 250px;
   overflow:hidden;
   aspect-ratio:16/9;
   border-radius:5px;
@@ -273,8 +274,8 @@ nav .motto, .nav-links{
 
 .featured-banner img {
     display:block;
+    height:100%;
     width:100%;
-    max-height: 250px;
     object-fit: cover;
   }
 
@@ -448,6 +449,7 @@ section.post::after{
   box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
   margin-top:3rem;
   margin-bottom:3rem;
+  display: flow-root;
 }
 
 .post-head{
@@ -504,6 +506,32 @@ section.post::after{
     padding: .25rem 1rem;
     margin-bottom:0;
     border-radius:5px;
+}
+
+
+
+.post img{
+  width:70%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  margin-inline:auto;
+  margin-top:3rem;
+  margin-bottom: 3rem;
+}
+
+.post-multi-img{
+  display:grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+  grid-template-rows:none;
+  gap:0.5rem;
+}
+
+.post-multi-img img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit: cover;
+  margin-top:1.2rem;
+  margin-bottom: 3rem;
 }
 
 section.post-map{
