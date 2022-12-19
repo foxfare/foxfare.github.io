@@ -520,18 +520,24 @@ section.post::after{
 }
 
 .post-multi-img{
+  width:90%;
+  margin-inline:auto;
   display:grid;
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
   grid-template-rows:none;
-  gap:0.5rem;
+  gap:1rem;
 }
 
 .post-multi-img img{
   width:100%;
-  aspect-ratio:4/3;
+  aspect-ratio: 16/9;
   object-fit: cover;
   margin-top:1.2rem;
   margin-bottom: 3rem;
+}
+
+#kostarika-2021-02-1{
+  object-position: 50% 35%;
 }
 
 section.post-map{
