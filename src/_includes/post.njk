@@ -26,6 +26,7 @@ layout: 'base.njk'
 </section>
   
   <!MAPA>
+  {% if map %}
     <section class="post-map">
         <div class="container one-column">
             <div class="map-title text-center">
@@ -36,4 +37,5 @@ layout: 'base.njk'
             <iframe class="map" src="{{ map }}"></iframe>
         </div>
     </section>
+    {% endif %}
 </div>
