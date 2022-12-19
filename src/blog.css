@@ -237,11 +237,13 @@ nav .motto, .nav-links{
   padding:10px;
   padding-bottom: 15px;
   border-radius:10px;
-  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);  
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / 5%);
+  transition: .25s ease;  
 }
 
 .featured-card:hover{
   box-shadow: 0 15px 15px hsl(0deg 0% 0% / 12%);
+  scale: 1.05;
   transition: .25s ease;
 }
 
@@ -279,24 +281,6 @@ nav .motto, .nav-links{
     object-fit: cover;
   }
 
-.container.featured-cta {
-    display:flex;
-    justify-content: space-between;
-    width:fit-content;
-  }
-
-  .featured-cta > a {
-    color: var(--clr-secondary);
-    font-size:1rem;
-    font-weight: 700;
-    width:fit-content;
-  }
-
-  .featured-cta a:hover{
-    transition: .25s ease;
-    color: var(--clr-primary);
-  }
-
 /*BLOG CARDS*/
 .blog .h2{
   padding: 2rem;
@@ -319,6 +303,7 @@ nav .motto, .nav-links{
 
 .blog-card:hover{
   box-shadow: 0 15px 15px hsl(0deg 0% 0% / 12%);
+  scale: 1.05;
   transition: .25s ease;
 }
 
