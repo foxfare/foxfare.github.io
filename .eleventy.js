@@ -1,4 +1,7 @@
 const {DateTime} = require("luxon");
+
+const tags = require('./tags.cjs');
+
 var lodashChunk = require("lodash.chunk");
 
 module.exports = function(eleventyConfig) {
@@ -82,8 +85,37 @@ module.exports = function(eleventyConfig) {
         return tagMap;
     });
 
+    eleventyConfig.addFilter('getDate', time.getDate);
 
-    
+    eleventyConfig.addFilter('tagIsPublic', tags.isPublic);
+    eleventyConfig.addFilter('publicTags', tags.publicTags);
+    eleventyConfig.addFilter('getTags', tags.getTags);
+    eleventyConfig.addFilter('tagData', tags.tagData);
+    eleventyConfig.addFilter('displayName', tags.displayName);
+    eleventyConfig.addFilter('tagLink', tags.tagLink);
+  
+    eleventyConfig.addFilter('isPublic', pages.isPublic);
+    eleventyConfig.addFilter('getPublic', pages.getPublic);
+    eleventyConfig.addFilter('isCurrent', pages.isCurrent);
+    eleventyConfig.addFilter('getCurrent', pages.getCurrent);
+    eleventyConfig.addFilter('getPage', pages.getPage);
+    eleventyConfig.addFilter('findPage', pages.findPage);
+    eleventyConfig.addFilter('hasData', pages.hasData);
+    eleventyConfig.addFilter('getData', pages.getData);
+    eleventyConfig.addFilter('findData', pages.findData);
+    eleventyConfig.addFilter('withData', pages.withData);
+    eleventyConfig.addFilter('pageYears', pages.pageYears);
+    eleventyConfig.addFilter('eventSort', pages.eventSort);
+    eleventyConfig.addFilter('byYear', pages.byYear);
+    eleventyConfig.addFilter('removePage', pages.removePage);
+    eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
+    eleventyConfig.addFilter('isType', pages.isType);
+  
+    eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
+    eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
+    eleventyConfig.addFilter('pageType', taxonomy.pageType);
+  
+
 
     return {
         dir: {

@@ -1,0 +1,76 @@
+---
+layout: 'base.njk'
+title: Nejnovější cestopisy
+motto: Nejnovější cestopisy
+permalink: /cestopisy/
+---
+
+<section class="article-list bg-secondary">
+  <div class="container side-column">
+    <div class="blog"><h2 class="h2">Nejnovější cestopisy</h2>
+        <div class="blog-card-group">
+        
+        {% set postList = collections.cestopis | reverse %}
+        {% for post in postList %}
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <a href={{ post.url }}><img src="{{ post.data.image }}"></a>
+                </div>
+
+                <div class="blog-card-content-wrapper">
+                  <div class="wrapper">
+                    <a href="\tags\{{ post.data.category }}\"><button class="blog-topic">{{ post.data.topic }}</button></a>
+                    <p class="blog-date">{{ post.date | postDate }}</p>      
+                  </div>
+                    <a href={{ post.url }}>
+                    <h3>{{ post.data.title }}</h3>
+                    <h3 class="blog-series">{{ post.data.series }}</h3>
+                    <p class="blog-card-text">{{ post.data.description }}</p>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="aside">
+      <div class="topics">
+        <h2 class="h2">Kategorie</h2>
+
+        <a href="\tags\cestopis\" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="book-outline" role="img"></ion-icon>
+          </div>
+          <p>Cestopisy</p>
+        </a>
+
+        <a href="#" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="information-outline" role="img"></ion-icon>
+          </div>
+          <p>Cestotipy</p>
+        </a>
+
+        <a href="#" class="topic-btn">
+          <div class="icon-box">
+            <ion-icon name="earth-outline" role="img"></ion-icon>
+          </div>
+          <p>Kontinenty</p>
+        </a>
+
+      </div>
+
+
+      <div class="tags">
+        <h2 class="h2">Tagy</h2>
+        <div class="wrapper">
+          {% for tag in collections.tagList %}
+            <a href ="/tags/{{ tag }}/"><button class="hashtag">#{{ tag }}</button></a>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
